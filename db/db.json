@@ -1,1 +1,26 @@
-[{"title":"Test Title","text":"Test text"},{"title":"Grocery","text":"Bread, milk, and eggs","id":"1"},{"title":"New note","text":"Some text","id":"2"}]
+[
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
+  {
+    "title": "Grocery",
+    "text": "Bread, milk, and eggs",
+    "id": "1"
+  },
+  {
+    "title": "Assignment",
+    "text": "Garbage",
+    "id": "2"
+  },
+  {
+    "title": "Another assignment",
+    "text": "Rubbish",
+    "id": "3"
+  },
+  {
+    "title": "SDSDF",
+    "text": "sdsindgsjni",
+    "id": "4"
+  }
+]
