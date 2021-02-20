@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-// const {notes} = require('../db/db.json');
 
 
 router.get('/notes', (req, res) => {
-    fs.readFile('./db/db.json', (err, data) => {
+    fs.readFile('db/db.json', (err, data) => {
         if (err) throw err;
         let notes = JSON.parse(data);
         res.json(notes);
@@ -14,7 +13,7 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    fs.readFile('./db/db.json', (err, data) => {
+    fs.readFile('db/db.json', (err, data) => {
         if (err) throw err;
         
         let notes = JSON.parse(data);
@@ -24,9 +23,11 @@ router.post('/notes', (req, res) => {
         newNote.id = noteId;
         notes.push(newNote);
 
-        fs.writeFileSync('./db/db.json', JSON.stringify(notes))
+        fs.writeFileSync('db/db.json', JSON.stringify(notes), (err, data) => {
+            if (err) throw err;
+            res.json(notes);
+        })
     })
-    res.json(notes);
 });
 
 module.exports = router;
