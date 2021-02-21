@@ -1,10 +1,11 @@
+//==== DEPENDENCIES ====//
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const crypto = require('crypto');
 
 
-
+//==== GET NOTES ====//
 router.get('/notes', (req, res) => {
     fs.readFile('db/db.json', (err, data) => {
         if (err) throw err;
@@ -14,7 +15,7 @@ router.get('/notes', (req, res) => {
     })
 });
 
-
+//==== SUBMIT NOTES ====//
 router.post('/notes', (req, res) => {
     fs.readFile('db/db.json', (err, data) => {
         if (err) throw err;
@@ -33,7 +34,7 @@ router.post('/notes', (req, res) => {
     })
 });
 
-
+//==== DELETE NOTES ====//
 router.delete('/notes/:id', (req, res) => {
     fs.readFile('db/db.json', (err, data) => {
         if (err) throw err;
