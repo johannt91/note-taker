@@ -4,7 +4,7 @@
 
   ## Description
 
-  A simple note taking application to write and store notes.
+  A simple note taking application to write, store, and delete notes.
 
   Link here: [Note Taker App](https://dry-everglades-61067.herokuapp.com/notes)
 
