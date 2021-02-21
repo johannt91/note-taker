@@ -22,7 +22,6 @@ router.post('/notes', (req, res) => {
         let notes = JSON.parse(data);
 
         let newNote = req.body;
-        // let noteId = (notes.length).toString();
         let noteId = crypto.randomBytes(16).toString("hex");
         newNote.id = noteId;
         notes.push(newNote);
